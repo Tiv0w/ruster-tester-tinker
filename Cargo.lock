@@ -44,14 +44,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a06f77d526c1a601b7c4cdd98f54b5eaabffc14d5f2f0296febdc7f357c6d3ba"
 
 [[package]]
-name = "guessing-game"
-version = "0.1.0"
-dependencies = [
- "colored",
- "rand",
-]
-
-[[package]]
 name = "hermit-abi"
 version = "0.1.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -99,6 +91,14 @@ name = "rand_core"
 version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c33a3c44ca05fa6f1807d8e6743f3824e8509beca625669633be0acbdf509dc"
+
+[[package]]
+name = "ruster-tester-tinker"
+version = "0.1.0"
+dependencies = [
+ "colored",
+ "rand",
+]
 
 [[package]]
 name = "winapi"
