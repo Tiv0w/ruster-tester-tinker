@@ -1,8 +1,9 @@
 mod fahrenheit_celsius;
 mod fibonacci;
 mod guess_the_number;
+mod utils;
+use crate::utils::choice;
 use colored::*;
-use std::io;
 
 fn main() {
     println!("{}", "\nWelcome to my Toolbox!\n".purple().bold());
@@ -13,16 +14,9 @@ fn main() {
     println!("---");
     println!("Choice:");
 
-    let mut choice: String = String::new();
-    io::stdin()
-        .read_line(&mut choice)
-        .expect("Failed to read your choice.");
+    let choice = choice::ask_small_integer_choice();
     println!("---\n");
 
-    let choice: u8 = choice
-        .trim()
-        .parse()
-        .expect("There was a problem with the choice selection.");
     match choice {
         1 => {
             for num in 1..20 {

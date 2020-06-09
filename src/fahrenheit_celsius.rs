@@ -1,3 +1,4 @@
+use crate::utils::choice;
 use colored::*;
 use std::io;
 
@@ -16,14 +17,7 @@ pub fn start_interactive_converter() {
     println!("2) Celsius -> Fahrenheit");
     println!("Choice:");
 
-    let mut choice: String = String::new();
-    io::stdin()
-        .read_line(&mut choice)
-        .expect("Failed to read your choice.");
-    let choice: u8 = choice
-        .trim()
-        .parse()
-        .expect("There was a problem with the choice selection.");
+    let choice = choice::ask_small_integer_choice();
     println!("---");
 
     println!("Value to convert:");
