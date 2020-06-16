@@ -1,3 +1,4 @@
+mod daily_programmer;
 mod small_tinkering;
 mod utils;
 use crate::utils::choice;
@@ -11,6 +12,7 @@ fn main() {
     println!("3) Fahrenheit - Celsius converter");
     println!("4) String Slicer");
     println!("5) Area calculator");
+    println!("6) Daily Programmer 383");
     println!("---");
     println!("Choice:");
 
@@ -31,6 +33,7 @@ fn main() {
             small_tinkering::slicer::second_word("yes sir")
         ),
         5 => small_tinkering::rectangle::rectangle_tester(),
+        6 => daily_programmer::dp_383::same_necklace(),
         _ => println!("The tool selected is incorrect."),
     }
 }
