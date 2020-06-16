@@ -1,6 +1,4 @@
-mod fahrenheit_celsius;
-mod fibonacci;
-mod guess_the_number;
+mod small_tinkering;
 mod utils;
 use crate::utils::choice;
 use colored::*;
@@ -11,6 +9,8 @@ fn main() {
     println!("1) Fibonacci");
     println!("2) Guess The Number");
     println!("3) Fahrenheit - Celsius converter");
+    println!("4) String Slicer");
+    println!("5) Area calculator");
     println!("---");
     println!("Choice:");
 
@@ -20,11 +20,17 @@ fn main() {
     match choice {
         1 => {
             for num in 1..20 {
-                println!("{}", fibonacci::pretty_fibonacci(num));
+                println!("{}", small_tinkering::fibonacci::pretty_fibonacci(num));
             }
         }
-        2 => guess_the_number::guess_the_number(),
-        3 => fahrenheit_celsius::start_interactive_converter(),
+        2 => small_tinkering::guess_the_number::guess_the_number(),
+        3 => small_tinkering::fahrenheit_celsius::start_interactive_converter(),
+        4 => println!(
+            "First and Second word: {}, {}",
+            small_tinkering::slicer::first_word("yes sir"),
+            small_tinkering::slicer::second_word("yes sir")
+        ),
+        5 => small_tinkering::rectangle::rectangle_tester(),
         _ => println!("The tool selected is incorrect."),
     }
 }
